@@ -39,6 +39,8 @@ function icms_module_update_banners($module) {
  * 
  * The procedures to run upon installation of the module
  * @todo	Handle blocks that may be assigned to symlinks for the legacy banner admin 
+ * @todo	Remove legacy files and folders, if present : /banners.php, /modules/system/admin/banners/
+ * @todo	Handle error conditions
  * @param unknown_type $module
  */
 function icms_module_install_banners($module) {
