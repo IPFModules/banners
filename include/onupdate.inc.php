@@ -54,7 +54,7 @@ function icms_module_install_banners($module) {
 		$table = new icms_db_legacy_updater_Table('bannerfinish');
 		if ($table->exists()) $table->dropTable();
 		unset($table);
-		
+		$icmsDatabaseUpdater = icms_db_legacy_Factory::getDatabaseUpdater();
 		$table = new icms_db_legacy_updater_Table('config');
 		$icmsDatabaseUpdater->runQuery("DELETE FROM `" . $table->name() . "` WHERE conf_modid = 0 AND conf_name IN ('banners', 'my_ip')");
 		unset($table);
