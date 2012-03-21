@@ -32,7 +32,7 @@ class mod_banners_PositionHandler extends icms_ipf_Handler {
 		if (!count($this->_positions)) {
 			$positions = $this->getObjects();
 			foreach ($positions as $position) {
-				$this->_positions[$position->getVar('position_id')] = $position->getVar('title');
+				$this->_positions[$position->getVar('position_id')] = $position->getVar('title') . ' ( ' . $position->getVar('width') . 'x' . $position->getVar('height') . ' )';
 			}
 		}
 		return $this->_positions;

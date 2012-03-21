@@ -77,7 +77,7 @@ define("_CO_BANNERS_BANNER_CLICKS_PERCENT_DSC", " ");
 define("_CO_BANNERS_BANNER_EXTRA", "Extra information");
 define("_CO_BANNERS_BANNER_EXTRA_DSC", " ");
 define("_CO_BANNERS_BANNER_POSITIONS", "Banner positions");
-define("_CO_BANNERS_BANNER_POSITIONS_DSC", " ");
+define("_CO_BANNERS_BANNER_POSITIONS_DSC", "Maximum Dimensions: 1000x1000. Beware of the position dimensions!");
 define("_CO_BANNERS_BANNER_ACTIVE", "Active");
 define("_CO_BANNERS_BANNER_ACTIVE_DSC", " A switch to overwrite the impressions, begin and end date.");
 define("_CO_BANNERS_BANNER_DESCRIPTION", "Description");
