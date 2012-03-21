@@ -22,8 +22,16 @@ define("BANNERS_DB_VERSION", 1);
  * it is possible to define custom functions which will be call when the module is updating at the
  * correct time in update incrementation. Simpy define a function named <direname_db_upgrade_db_version>
  */
+function copySmartyPlugin() {
+	$dir = ICMS_ROOT_PATH . '/modules/banners/plugins/';
+	$file = 'function.banners.php';
+	$plugin_folder = ICMS_LIBRARIES_PATH . '/smarty/icms_plugins/';
+	if(!is_file($plugin_folder . $file)) {
+		icms_core_Filesystem::copyRecursive($dir . $file, $plugin_folder . $file);
+	}
+}
+ 
 //function banners_db_upgrade_1() {}
-
 function icms_module_update_banners($module) {
 	// optimize tables
 	/*$banners_banner_handler = icms_getModuleHandler('banner', basename(dirname(dirname(__FILE__))), 'banners');
@@ -44,6 +52,8 @@ function icms_module_update_banners($module) {
  * @param unknown_type $module
  */
 function icms_module_install_banners($module) {
+	// copy smarty plugin, if file does not exist in smarty plugins
+	copySmartyPlugin();
 	/* Remove legacy banner tables, settings and symlinks 
 		$table = new icms_db_legacy_updater_Table('banner');
 		if ($table->exists()) $table->dropTable();
