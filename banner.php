@@ -80,15 +80,8 @@ function editbanner($client_id, $banner_id = 0) {
 
 include_once 'header.php';
 
-if (!is_object(icms::$user)) redirect_header(icms_getPreviousPage(ICMS_URL), 3, _NOPERM);
-
 // check if a client is assigned to the current user
 $banners_client_handler = icms_getModuleHandler('client', basename(dirname(__FILE__)), 'banners');
-$client_id = $banners_client_handler->getUserClientId(TRUE);
-if ($client_id === FALSE) {
-	header("location: client.php");
-	exit();
-}
 
 $xoopsOption['template_main'] = "banners_banner.html";
 include_once ICMS_ROOT_PATH . "/header.php";
@@ -112,6 +105,12 @@ if (in_array($clean_op, $valid_op, TRUE)) {
 	switch ($clean_op) {
 		case 'mod':
 		case 'changedField':
+			if (!is_object(icms::$user)) redirect_header(icms_getPreviousPage(ICMS_URL), 3, _NOPERM);
+			$client_id = $banners_client_handler->getUserClientId(TRUE);
+			if ($client_id === FALSE) {
+				header("location: client.php");
+				exit();
+			}
 			// check if at least one position is available
 			$banners_position_handler = icms_getModuleHandler('position', basename(dirname(__FILE__)), 'banners');
 			$positions = $banners_position_handler->getCount();
@@ -119,6 +118,12 @@ if (in_array($clean_op, $valid_op, TRUE)) {
 			editbanner($client_id, $clean_banner_id);
 			break;
 		case 'addbanner':
+			if (!is_object(icms::$user)) redirect_header(icms_getPreviousPage(ICMS_URL), 3, _NOPERM);
+			$client_id = $banners_client_handler->getUserClientId(TRUE);
+			if ($client_id === FALSE) {
+				header("location: client.php");
+				exit();
+			}
 			$bannerObj = $banners_banner_handler->get($clean_banner_id);
 			$isNew = $bannerObj->isNew();
 
@@ -168,6 +173,12 @@ if (in_array($clean_op, $valid_op, TRUE)) {
 			exit();
 			break;
 		default:
+			$client_id = $banners_client_handler->getUserClientId(TRUE);
+			if ($client_id === FALSE) {
+				header("location: client.php");
+				exit();
+			}
+			if (!is_object(icms::$user)) redirect_header(icms_getPreviousPage(ICMS_URL), 3, _NOPERM);
 			// list all banners for this customer
 			$tableObj = new icms_ipf_view_Table($banners_banner_handler, icms_buildCriteria(array('client_id' => $client_id)), array('edit'), TRUE);
 			$tableObj->addColumn(new icms_ipf_view_Column('status', 'center', FALSE, 'getStatusForTableDisplay', FALSE, FALSE, FALSE));

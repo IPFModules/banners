@@ -44,7 +44,7 @@ function icms_module_update_banners($module) {
  * @param unknown_type $module
  */
 function icms_module_install_banners($module) {
-	/* Remove legacy banner tables, settings and symlinks */
+	/* Remove legacy banner tables, settings and symlinks 
 		$table = new icms_db_legacy_updater_Table('banner');
 		if ($table->exists()) $table->dropTable();
 		unset($table);
@@ -61,7 +61,7 @@ function icms_module_install_banners($module) {
 		
 		$table = new icms_db_legacy_updater_Table('config');
 		$icmsDatabaseUpdater->runQuery("DELETE FROM `" . $table->name() . "` WHERE page_url = 'modules/system/admin.php?fct=banners*'");
-		unset($table);
+		unset($table);*/
 	
 	return TRUE;
 }
