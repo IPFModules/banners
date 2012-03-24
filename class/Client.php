@@ -24,10 +24,10 @@ class mod_banners_Client extends icms_ipf_Object {
 		$this->quickInitVar('company', XOBJ_DTYPE_TXTBOX, FALSE);
 		$this->quickInitVar('first_name', XOBJ_DTYPE_TXTBOX, TRUE);
 		$this->quickInitVar('last_name', XOBJ_DTYPE_TXTBOX, TRUE);
-		$this->quickInitVar('street', XOBJ_DTYPE_TXTBOX, TRUE);
-		$this->quickInitVar('street_number', XOBJ_DTYPE_INT, TRUE);
-		$this->quickInitVar('zip_code', XOBJ_DTYPE_INT, TRUE);
-		$this->quickInitVar('city', XOBJ_DTYPE_TXTBOX, TRUE);
+		$this->quickInitVar('street', XOBJ_DTYPE_TXTBOX, FALSE);
+		$this->quickInitVar('street_number', XOBJ_DTYPE_INT, FALSE);
+		$this->quickInitVar('zip_code', XOBJ_DTYPE_INT, FALSE);
+		$this->quickInitVar('city', XOBJ_DTYPE_TXTBOX, FALSE);
 		$this->quickInitVar('state', XOBJ_DTYPE_TXTBOX, FALSE);
 		$this->quickInitVar('country', XOBJ_DTYPE_TXTBOX, TRUE);
 		$this->quickInitVar('since', XOBJ_DTYPE_STIME, TRUE);
