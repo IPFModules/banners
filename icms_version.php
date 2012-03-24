@@ -50,6 +50,7 @@ $modversion = array(
 /** Install and update informations */
   'onInstall'				=> "include/onupdate.inc.php",
   'onUpdate'				=> "include/onupdate.inc.php",
+  'onUninstall'				=> "include/onupdate.inc.php",
 
 /** Contributors */
   'developer_website_url'	=> "http://www.impresscms.de",

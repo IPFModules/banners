@@ -22,6 +22,16 @@ define("BANNERS_DB_VERSION", 1);
  * it is possible to define custom functions which will be call when the module is updating at the
  * correct time in update incrementation. Simpy define a function named <direname_db_upgrade_db_version>
  */
+function deleteSmartyPlugin() {
+	$file = 'function.banners.php';
+	$plugin = ICMS_LIBRARIES_PATH . '/smarty/icms_plugins/function.banners.php';
+	if(is_file($plugin)) {
+		icms_core_Filesystem::chmod($plugin);
+		icms_core_Filesystem::deleteFile($plugin);
+		echo "<code><b>Smarty plugin successfully deleted.</b></code>";
+	}
+}
+
 function copySmartyPlugin() {
 	$dir = ICMS_ROOT_PATH . '/modules/banners/plugins/';
 	$file = 'function.banners.php';
@@ -73,5 +83,10 @@ function icms_module_install_banners($module) {
 		$icmsDatabaseUpdater->runQuery("DELETE FROM `" . $table->name() . "` WHERE page_url = 'modules/system/admin.php?fct=banners*'");
 		unset($table);*/
 	
+	return TRUE;
+}
+
+function icms_module_uninstall_banners($module) {
+	deleteSmartyPlugin();
 	return TRUE;
 }
