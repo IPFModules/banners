@@ -19,7 +19,7 @@ $modversion = array(
   'name'					=> _MI_BANNERS_MD_NAME,
   'version'					=> 1.1,
   'description'				=> _MI_BANNERS_MD_DESC,
-  'author'					=> "Phoenyx",
+  'author'					=> "Phoenyx, QM-B, Skenow",
   'credits'					=> "The ImpressCMS Project",
   'help'					=> "",
   'license'					=> "GNU General Public License (GPL)",
@@ -33,11 +33,11 @@ $modversion = array(
   'image'					=> "images/icon_big.png", /* for backward compatibility */
 
 /**  Development information */
-  'status_version'			=> "RC",
-  'status'					=> "RC",
-  'date'					=> "12 April 2012",
-  'author_word'				=> "",
-  'warning'					=> _CO_ICMS_WARNING_RC,
+  'status_version'			=> "Final",
+  'status'					=> "Final",
+  'date'					=> "1 October 2012",
+  'author_word'				=> "ImpressCMS 1.3+ Only",
+  'warning'					=> _CO_ICMS_WARNING_FINAL,
 
 /** Menu information */
   'hasMain'					=> 1,
