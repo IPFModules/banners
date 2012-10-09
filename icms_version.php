@@ -35,7 +35,7 @@ $modversion = array(
 /**  Development information */
   'status_version'			=> "Final",
   'status'					=> "Final",
-  'date'					=> "1 October 2012",
+  'date'					=> "9 October 2012",
   'author_word'				=> "ImpressCMS 1.3+ Only",
   'warning'					=> _CO_ICMS_WARNING_FINAL,
 
