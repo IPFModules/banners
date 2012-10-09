@@ -25,7 +25,7 @@ $modversion = array(
   'license'					=> "GNU General Public License (GPL)",
   'official'				=> 1,
   'dirname'					=> basename(dirname(__FILE__)),
-  'modname'					=> 'banner',
+  'modname'					=> 'banners',
 
 /**  Images information  */
   'iconsmall'				=> "images/icon_small.png",
@@ -35,7 +35,7 @@ $modversion = array(
 /**  Development information */
   'status_version'			=> "Final",
   'status'					=> "Final",
-  'date'					=> "1 October 2012",
+  'date'					=> "9 October 2012",
   'author_word'				=> "ImpressCMS 1.3+ Only",
   'warning'					=> _CO_ICMS_WARNING_FINAL,
 
