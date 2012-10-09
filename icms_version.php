@@ -25,7 +25,7 @@ $modversion = array(
   'license'					=> "GNU General Public License (GPL)",
   'official'				=> 1,
   'dirname'					=> basename(dirname(__FILE__)),
-  'modname'					=> 'banner',
+  'modname'					=> 'banners',
 
 /**  Images information  */
   'iconsmall'				=> "images/icon_small.png",
