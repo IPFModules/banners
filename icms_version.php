@@ -17,10 +17,10 @@ defined("ICMS_ROOT_PATH") or die("ICMS root path not defined");
 /**  General Information  */
 $modversion = array(
   'name'					=> _MI_BANNERS_MD_NAME,
-  'version'					=> 1.1,
+  'version'					=> "1.1.1",
   'description'				=> _MI_BANNERS_MD_DESC,
-  'author'					=> "Phoenyx, QM-B, Skenow",
-  'credits'					=> "The ImpressCMS Project",
+  'author'					=> "fiammybe",
+  'credits'					=> "The ImpressCMS Project,Phoenyx, QM-B, Skenow",
   'help'					=> "",
   'license'					=> "GNU General Public License (GPL)",
   'official'				=> 1,
@@ -35,9 +35,9 @@ $modversion = array(
 /**  Development information */
   'status_version'			=> "Final",
   'status'					=> "Final",
-  'date'					=> "9 October 2012",
-  'author_word'				=> "ImpressCMS 1.3+ Only",
-  'warning'					=> _CO_ICMS_WARNING_FINAL,
+  'date'					=> "4 October 2018",
+  'author_word'				=> "ImpressCMS 1.3.11+ Only",
+  'warning'					=> _CO_ICMS_WARNING_RC,
 
 /** Menu information */
   'hasMain'					=> 1,
