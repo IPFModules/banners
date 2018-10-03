@@ -33,8 +33,8 @@ $modversion = array(
   'image'					=> "images/icon_big.png", /* for backward compatibility */
 
 /**  Development information */
-  'status_version'			=> "Final",
-  'status'					=> "Final",
+  'status_version'			=> "RC",
+  'status'					=> "RC",
   'date'					=> "4 October 2018",
   'author_word'				=> "ImpressCMS 1.3.11+ Only",
   'warning'					=> _CO_ICMS_WARNING_RC,
@@ -57,7 +57,7 @@ $modversion = array(
   'developer_website_name'	=> "ImpressCMS Germany",
   'developer_email'			=> "phoenyx@impresscms.de");
 
-$modversion['people']['developers'][]		= "[url=http://community.impresscms.org/userinfo.php?uid=1168]Phoenyx[/url]";
+$modversion['people']['developers'][]		= "[url=https://www.impresscms.org/userinfo.php?uid=1168]Phoenyx[/url]";
 //$modversion['people']['testers'][]		= "";
 //$modversion['people']['translators'][]	= "";
 //$modversion['people']['documenters'][]	= "";
