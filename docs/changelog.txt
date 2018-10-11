@@ -1,6 +1,12 @@
+=== Banners 1.1.1 ===
+Release data: 11 oct 2018
+
+'''Fixed'''
+* Changed the version info so this module works well with ImpressCMS 1.3.11
+* ATTENTION : this module is deprecated and will be removed after v1.3.x
+
 === Banners 1.0 Final ===
 Release data: 18 Sept 2011
-Revision: 22690
 
 '''Fixed'''
 * #383 (addons): % is now calculated correctly (phoenyx)

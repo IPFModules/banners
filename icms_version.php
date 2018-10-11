@@ -34,10 +34,10 @@ $modversion = array(
 
 /**  Development information */
   'status_version'			=> "RC",
-  'status'					=> "RC",
-  'date'					=> "4 October 2018",
+  'status'					=> "final",
+  'date'					=> "11 October 2018",
   'author_word'				=> "ImpressCMS 1.3.11+ Only",
-  'warning'					=> _CO_ICMS_WARNING_RC,
+  'warning'					=> _CO_ICMS_WARNING_FINAL,
 
 /** Menu information */
   'hasMain'					=> 1,
@@ -53,9 +53,9 @@ $modversion = array(
   'onUninstall'				=> "include/onupdate.inc.php",
 
 /** Contributors */
-  'developer_website_url'	=> "http://www.impresscms.de",
-  'developer_website_name'	=> "ImpressCMS Germany",
-  'developer_email'			=> "phoenyx@impresscms.de");
+  'developer_website_url'	=> "http://www.impresscms.org",
+  'developer_website_name'	=> "ImpressCMS",
+  'developer_email'			=> "david.j@impresscms.org");
 
 $modversion['people']['developers'][]		= "[url=https://www.impresscms.org/userinfo.php?uid=1168]Phoenyx[/url]";
 //$modversion['people']['testers'][]		= "";
@@ -64,7 +64,7 @@ $modversion['people']['developers'][]		= "[url=https://www.impresscms.org/userin
 //$modversion['people']['other'][]			= "";
 
 /** Manual */
-//$modversion['manual']['wiki'][]			= "<a href='http://wiki.impresscms.org/index.php?title=banners' target='_blank'>English</a>";
+//$modversion['manual']['wiki'][]			= "<a href='https://www.impresscms.org/modules/simplywiki/index.php?title=banners' target='_blank'>English</a>";
 
 /** Database information */
 $modversion['object_items'] = array('banner', 'client', 'position', 'positionlink', 'visiblein');
